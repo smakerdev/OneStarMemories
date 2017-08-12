@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/smakerdev/OneStarMemories/issues"
   },
-  "homepage": "https://github.com/smakerdev/OneStarMemories#readme"
+  "homepage": "https://github.com/smakerdev/OneStarMemories#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "http": "0.0.0",
+    "mongoose": "^4.11.6"
+  }
 }

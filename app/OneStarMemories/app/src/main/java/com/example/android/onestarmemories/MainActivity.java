@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         findViewById(R.id.main_button).setOnClickListener(
                 new Button.OnClickListener() {
@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         MapFragment mapFragment = (MapFragment)fragmentManager
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
 
     }
 
@@ -63,6 +64,17 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                 // TODO: 마커 옵션 (아이콘 변경) 별로
 //                markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.marker_3g));
                 markerOptions.position(point); // 마커위치설정
+                System.out.println(point.latitude + " " + point.longitude);
+
+                Intent intent = new Intent(getApplicationContext(), EntryActivity.class);
+                intent.putExtra("lng", point.longitude);
+                intent.putExtra("lat", point.latitude);
+
+                startActivity(intent);
+                finish();
+
+
+
                 // TODO: point.longitude, point.latitude
                 map.animateCamera(CameraUpdateFactory.newLatLng(point   ));   // 마커생성위치로 이동
                 map.addMarker(markerOptions); //마커 생성

@@ -30,6 +30,11 @@ public class EntryActivity extends AppCompatActivity {
                 }
         );
 
+        Intent intent = getIntent();
+        Double lng = intent.getExtras().getDouble("lng");
+        Double lat = intent.getExtras().getDouble("lat");
+
+        System.out.println(lng + " " + lat);
 
     }
 

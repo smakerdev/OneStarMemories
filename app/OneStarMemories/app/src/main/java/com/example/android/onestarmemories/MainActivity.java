@@ -15,10 +15,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-
         findViewById(R.id.main_button).setOnClickListener(
                 new Button.OnClickListener() {
                     public void onClick(View v) {
@@ -28,8 +25,6 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
         );
-
-
     }
 
     @Override
@@ -38,4 +33,5 @@ public class MainActivity extends AppCompatActivity {
         super.attachBaseContext(TypekitContextWrapper.wrap(newBase));
 
     }
+
 }

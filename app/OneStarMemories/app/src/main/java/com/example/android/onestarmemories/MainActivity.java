@@ -17,7 +17,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import com.tsengvn.typekit.TypekitContextWrapper;
 
 public class MainActivity extends AppCompatActivity implements OnMapReadyCallback {
-
+    Intent intent;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,8 +27,6 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         findViewById(R.id.main_button).setOnClickListener(
                 new Button.OnClickListener() {
                     public void onClick(View v) {
-                        //여기에 이벤트를 적어주세요
-                        Intent intent = new Intent(MainActivity.this, EntryActivity.class);
                         startActivity(intent);
                     }
                 }
@@ -66,12 +64,9 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                 markerOptions.position(point); // 마커위치설정
                 System.out.println(point.latitude + " " + point.longitude);
 
-                Intent intent = new Intent(getApplicationContext(), EntryActivity.class);
+                intent = new Intent(getApplicationContext(), EntryActivity.class);
                 intent.putExtra("lng", point.longitude);
                 intent.putExtra("lat", point.latitude);
-
-                startActivity(intent);
-                finish();
 
 
 

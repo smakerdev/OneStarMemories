@@ -7,13 +7,11 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
-import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.tsengvn.typekit.TypekitContextWrapper;
@@ -25,10 +23,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/app
         findViewById(R.id.main_button).setOnClickListener(
                 new Button.OnClickListener() {
                     public void onClick(View v) {
@@ -38,16 +33,13 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                     }
                 }
         );
-<<<<<<< HEAD
-=======
+
 
         FragmentManager fragmentManager = getFragmentManager();
         MapFragment mapFragment = (MapFragment)fragmentManager
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
-
->>>>>>> origin/app
     }
 
     @Override
@@ -57,8 +49,6 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     }
 
-<<<<<<< HEAD
-=======
     @Override
     public void onMapReady(final GoogleMap map) {
 
@@ -78,9 +68,5 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                 map.addMarker(markerOptions); //마커 생성
             }
         });
-
-
     }
-
->>>>>>> origin/app
 }

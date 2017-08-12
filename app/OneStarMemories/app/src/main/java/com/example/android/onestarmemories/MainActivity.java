@@ -7,13 +7,11 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
-import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.tsengvn.typekit.TypekitContextWrapper;
@@ -24,7 +22,6 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         findViewById(R.id.main_button).setOnClickListener(
@@ -37,11 +34,11 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                 }
         );
 
+
         FragmentManager fragmentManager = getFragmentManager();
         MapFragment mapFragment = (MapFragment)fragmentManager
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
-
 
     }
 
@@ -71,8 +68,5 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                 map.addMarker(markerOptions); //마커 생성
             }
         });
-
-
     }
-
 }

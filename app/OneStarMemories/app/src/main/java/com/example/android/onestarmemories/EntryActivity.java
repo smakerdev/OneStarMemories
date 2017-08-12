@@ -6,25 +6,26 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-
 import com.tsengvn.typekit.TypekitContextWrapper;
 
-public class MainActivity extends AppCompatActivity {
+/**
+ * Created by 10102김동규 on 2017-08-13.
+ */
+
+public class EntryActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.entry);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-
-        findViewById(R.id.main_button).setOnClickListener(
+        findViewById(R.id.entry_button).setOnClickListener(
                 new Button.OnClickListener() {
                     public void onClick(View v) {
                         //여기에 이벤트를 적어주세요
-                        Intent intent = new Intent(MainActivity.this, EntryActivity.class);
-                        startActivity(intent);
+                        finish();
                     }
                 }
         );

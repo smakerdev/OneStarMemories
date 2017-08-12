@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({
 }));
 
 
-var index = require('./routes/index')(router);
+var index = require('./routes/index')(router, db.Users, db.Boards);
 
 app.use('/', index);
 

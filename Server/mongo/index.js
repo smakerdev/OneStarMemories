@@ -9,15 +9,32 @@ mongo.once('open', function () {
 
 var db = mongoose.connect('mongodb://localhost/onestar');
 
-// var ListSchema = new mongoose.Schema({
-//     name: {
-//         type: String
-//     },
-//     url: {
-//         type: String
-//     }
-// })
+var UserSchema = new mongoose.Schema({
+    nickname: {
+        type: String
+    },
+    region: {
+        type: String
+    }
+});
 
-// var Lists = mongoose.model('lists', ListSchema);
+var BoardSchema = new mongoose.Schema({
+    title: {
+        type: String
+    },
+    content: {
+        type: String
+    },
+    nickname: {
+        type: String
+    },
+    lat: {
+        type: Number
+    }
+});
 
-// exports.Lists = Lists;
+var Users = mongoose.model('users', UserSchema);
+var Boards = mongoose.model('boards', BoardSchema);
+
+exports.Users = Users;
+exports.Boards = Boards;

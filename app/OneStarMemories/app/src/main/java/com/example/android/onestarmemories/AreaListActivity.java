@@ -2,7 +2,6 @@ package com.example.android.onestarmemories;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.support.v4.content.ContextCompat;
 import android.widget.ListView;
 
 /**

@@ -30,6 +30,9 @@ var BoardSchema = new mongoose.Schema({
     },
     lat: {
         type: Number
+    },
+    lng: {
+        type: String
     }
 });
 

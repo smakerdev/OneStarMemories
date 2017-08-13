@@ -90,23 +90,23 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                         double lng[] = new double[response.length()];
                         double lat[] = new double[response.length()];
 
-                        try {
-                            for (int i = 0; i < response.length(); i++) {
-                                result = response.getJSONArray("result").getJSONObject(i);
-                                title[i] = result.getString("title");
-                                content[i] = result.getString("content");
-                                nickname[i] = result.getString("nickname");
-                                lng[i] = result.getDouble("lng");
-                                lat[i] = result.getDouble("lat");
-                            }
-
-                            for (int i = 0; i < response.length(); i++) {
-                                LatLng pos = new LatLng(lng[i], lat[i]);
-                                makeMarker(map, pos, title[i], content[i]);
-                            }
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                        }
+//                        try {
+////                            for (int i = 0; i < response.length(); i++) {
+////                                result = response.getJSONArray("result").getJSONObject(i);
+////                                title[i] = result.getString("title");
+////                                content[i] = result.getString("content");
+////                                nickname[i] = result.getString("nickname");
+////                                lng[i] = Double.parseDouble(result.getString("lng"));
+////                                lat[i] = Double.parseDouble(result.getString("lat"));
+////                            }
+////
+////                            for (int i = 0; i < response.length(); i++) {
+////                                LatLng pos = new LatLng(lng[i], lat[i]);
+////                                makeMarker(map, pos, title[i], content[i]);
+////                            }
+//                        } catch (JSONException e) {
+//                            e.printStackTrace();
+//                        }
                     }
                 },
                 new Response.ErrorListener()

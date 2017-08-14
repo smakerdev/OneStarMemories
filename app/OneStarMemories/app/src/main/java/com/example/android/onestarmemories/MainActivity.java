@@ -19,6 +19,7 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.tsengvn.typekit.TypekitContextWrapper;
@@ -126,7 +127,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
             public void onMapClick(LatLng point) {
                 MarkerOptions markerOptions = new MarkerOptions();
                 // TODO: 마커 옵션 (아이콘 변경) 별로
-//                markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.marker_3g));
+                markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.star));
                 markerOptions.position(point); // 마커위치설정
                 System.out.println(point.latitude + " " + point.longitude);
 
